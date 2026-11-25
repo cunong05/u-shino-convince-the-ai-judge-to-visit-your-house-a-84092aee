@@ -10,6 +10,7 @@ stroke font, a tiny canvas, and a hand-rolled PNG encoder). Fully
 deterministic: no randomness, no clock, no network, no files read.
 """
 
+import math
 import os
 import struct
 import zlib
@@ -163,7 +164,6 @@ class Canvas:
             self.disc(cx, cy, r, color)
         else:
             for a in range(0, 360, 2):
-                import math
                 self.disc(cx + int(r * math.cos(math.radians(a))),
                           cy + int(r * math.sin(math.radians(a))), 2, color)
 
