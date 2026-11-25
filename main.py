@@ -295,6 +295,10 @@ def render():
     # doodles in the bottom corners, clear of the text
     draw_cup(cv, 96, 922, 52, SOFT, (120, 72, 40))
     draw_house(cv, 836, 912, 96, GOLD, ACCENT, INK)
+    # wax seal with a heart, centred between the doodles
+    cv.circle(WIDTH // 2, 940, 26, ACCENT)
+    cv.circle(WIDTH // 2, 940, 19, (206, 110, 66))
+    draw_heart(cv, WIDTH // 2, 944, 9, GOLD)
     return cv
 
 
